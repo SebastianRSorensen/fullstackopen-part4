@@ -89,10 +89,19 @@ describe("favorite blog", () => {
 });
 
 describe("Author with most blogs", () => {
-  test("Authors blogs", () => {
+  test("Authors total blogs", () => {
     expect(listHelper.mostBlogs(blogs)).toEqual({
       author: "Robert C. Martin",
       blogs: 3,
+    });
+  });
+});
+
+describe("Author with most likes", () => {
+  test("Authors total likes", () => {
+    expect(listHelper.mostAuthorLikes(blogs)).toEqual({
+      author: "Edsger W. Dijkstra",
+      likes: 17,
     });
   });
 });
